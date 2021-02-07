@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key key}) : super(key: key);
@@ -22,14 +25,57 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Text(
               'Welcome to Sleep',
-              style: Theme.of(context).textTheme.headline4.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+              textAlign: TextAlign.center,
+              style: GoogleFonts.lato(
+                textStyle: Theme.of(context).textTheme.headline3,
+                color: Colors.white,
+                fontWeight: FontWeight.w900,
+              ),
             ),
-            Text(
-              'Explore the new king of sleep. It uses sound and vesualization to create perfect conditions for refreshing sleep.',
-              style: TextStyle(color: Colors.white),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              margin: EdgeInsets.symmetric(
+                  horizontal: MediaQuery.of(context).size.width / 7),
+              //width: MediaQuery.of(context).size.width / 1.2,
+              child: Text(
+                'Explore the new kind of sleep. It uses sound and visualization to create perfect conditions for refreshing sleep.',
+                style: GoogleFonts.lato(
+                    textStyle: Theme.of(context).textTheme.headline6,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w300,
+                    wordSpacing: 2.5,
+                    height: 1.4),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 1.8,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'Get Started'.toUpperCase(),
+                style: GoogleFonts.lato(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  textStyle: Theme.of(context).textTheme.bodyText1,
+                  letterSpacing: 1,
+                ),
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Color(0xFF8E97FD),
+                ),
+                minimumSize: MaterialStateProperty.all<Size>(
+                  Size(MediaQuery.of(context).size.width / 1.15,
+                      MediaQuery.of(context).size.height / 15),
+                ),
+                shape: MaterialStateProperty.all<OutlinedBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
