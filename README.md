@@ -1,6 +1,7 @@
 # flutter_ui
 
-A new Flutter project.
+<img src="https://github.com/LeggoTM/flutter-ui/blob/welcome-screen/screenshot/ss-android.png" width=40% height=40%>
+<img src="https://github.com/LeggoTM/flutter-ui/blob/welcome-screen/screenshot/ss-window.png">
 
 ## Getting Started
 
